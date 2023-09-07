@@ -51,7 +51,7 @@ const aboutIcon = document.getElementById('aboutIcon');
 
 // Add a click event listener to navigate to "about.html" when clicked
 aboutIcon.addEventListener('click', function () {
-    window.location.href = '#';
+    window.location.href = 'about.html';
 });
 
 // Get the "Accounts" icon element by its ID
