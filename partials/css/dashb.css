@@ -1,0 +1,242 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url("../img/dash-bg.jpg") center/cover fixed no-repeat;
+  color: white;
+  position: relative;
+  overflow: visible;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+  backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #313131; /* Your accent color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.title {
+  color: #2cd6ce;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mt-10 {
+  margin-top: 5rem;
+}
+
+/* Style for the search input field */
+#search-query {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+/* Style for the search button */
+
+/* Style for the genre dropdown */
+#search-genre {
+  width: 100%;
+  padding: 10px;
+  background: #3f3f3f;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Style for search results */
+.search-results {
+  text-align: center;
+}
+
+/* Style for search result list */
+#search-results-list {
+  list-style: none;
+  padding: 0;
+}
+.header__search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.header__search-form {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.header__mobile-search {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.header__submit {
+  background: #2cd6ce;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.selects-container {
+  margin-bottom: 20px;
+}
+.main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #0d857f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.accent-text {
+  color: #24f3e9; /* Your accent color */
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.disc-carousel .disc img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.latest-disc {
+  margin-right: 10px;
+}
+.latest-carousel .latest-disc img {
+  width: 80%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #313131; /* Your accent color */
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  /* Additional styles for the left side of the footer */
+  flex: 1;
+  text-align: left;
+}
+
+.footer-right {
+  /* Additional styles for the right side of the footer */
+  flex: 1;
+  text-align: right;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #2cd6ce; /* Your accent color */
+  margin-left: 20px;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-left p {
+  /* Additional styles for the left side content */
+  margin: 0;
+}
+
+.footer-social {
+  /* Additional styles for social media icons */
+}
+
+.social-icon {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.footer-info {
+  /* Additional styles for information text */
+  margin: 10px 0;
+  color: #24f3e9; /* Your accent color */
+}
+
+/* Spinning animation for the disc logo */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .disc-carousel .disc img,
+  .latest-carousel .latest-disc img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .disc-carousel .disc img,
+  .latest-carousel .latest-disc img {
+    height: 200px;
+  }
+}

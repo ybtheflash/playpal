@@ -1,0 +1,223 @@
+/* styles.css */
+
+/* Background container with blur effect */
+.bg-blur {
+  background-image: url("../img/main-bg.jpg");
+  background-size: cover;
+  filter: blur(4px); /* Add blur effect to the background image */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Transparent and dim navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (0.5 for dim) */
+  position: fixed; /* Fixed position so it stays at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2; /* Ensure it's above the background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.search .symbol:after,
+.search .symbol:before {
+  content: "";
+  background: var(--primary-color);
+  position: absolute;
+}
+.search input[type="text"],
+body {
+  font: 400 16px "Varela Round", sans-serif;
+}
+.search,
+body {
+  display: flex;
+}
+.search {
+  --background: #fff;
+  --text-color: #414856;
+  --primary-color: #0abeeb;
+  --border-radius: 10px;
+  --width: 350px;
+  --height: 55px;
+  background: var(--background);
+  width: auto;
+  height: var(--height);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+  justify-content: center;
+  align-items: center;
+}
+.search input[type="text"] {
+  position: relative;
+  width: var(--height);
+  height: var(--height);
+  color: var(--text-color);
+  border: 0;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0 0 0 40px;
+  transition: width 0.6s;
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+.search input[type="text"]:focus {
+  z-index: 0;
+  opacity: 1;
+  width: var(--width);
+}
+.search input[type="text"]:focus ~ .symbol::before {
+  width: 0%;
+}
+.search input[type="text"]:focus ~ .symbol:after {
+  clip-path: inset(0% 0% 0% 100%);
+  transition: clip-path 40ms linear 105ms;
+}
+.search input[type="text"]:focus ~ .symbol .disc {
+  top: -30px;
+  left: -30px;
+  transform: translate(0, 0);
+  transition: 0.6s;
+}
+.search input[type="text"]:focus ~ .symbol .lens {
+  top: 20px;
+  left: 15px;
+  transform: translate(0, 0);
+  fill: var(--primary-color);
+  transition: top 0.5s 0.1s, left 0.5s 0.1s, fill 0.3s;
+}
+.search .symbol {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search .symbol:before {
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.6s;
+}
+.search .symbol:after {
+  top: 21px;
+  left: 21px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 1;
+  clip-path: inset(0% 0% 0% 0%);
+  transition: clip-path 40ms linear 225ms;
+}
+.search .symbol .disc,
+.search .symbol .lens {
+  position: absolute;
+  fill: #fff;
+  stroke: none;
+  top: 50%;
+  left: 50%;
+}
+.search .symbol .disc {
+  width: 35px;
+  height: 32px;
+  transform: translate(-50%, -60%);
+  transition: 0.6s;
+}
+.search .symbol .lens {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+  top: 24px;
+  left: 24px;
+  transition: top 0.3s, left 0.3s, fill 0.2s 0.2s;
+}
+body {
+  background: #e8ebf3;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .socials {
+  position: fixed;
+  display: block;
+  left: 20px;
+  bottom: 20px;
+}
+body .socials > a {
+  display: block;
+  width: 30px;
+  opacity: var(--opacity, 0.2);
+  transform: scale(var(--scale, 0.8));
+  transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+}
+body .socials > a:hover {
+  --scale: 1;
+}
+.placeholder-italic::placeholder {
+  font-style: italic;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

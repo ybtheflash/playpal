@@ -1,0 +1,246 @@
+/* Reset some default styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Apply styles to the header (navigation bar) */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 2px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* This places the logo on the left and buttons on the right */
+  align-items: center;
+  padding: 0 20px; /* Add padding for spacing */
+}
+
+.logo {
+  font-size: 24px;
+  display: flex; /* This ensures the "Play" and "Pal" are on the same line */
+  align-items: center;
+}
+
+.blood-red {
+  color: #2cd6ce;
+}
+
+.profile-buttons {
+  display: flex; /* This makes the buttons align horizontally */
+}
+
+.profile-buttons button {
+  background-color: #2cd6ce;
+  color: #333;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.profile-buttons button:hover {
+  background-color: #ffffff33;
+  color: #fff;
+}
+
+/* Apply styles to the main content */
+main {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  min-height: calc(
+    100vh - 100px
+  ); /* Adjust as needed to prevent content from going under the footer */
+}
+
+.welcome-section {
+  text-align: center;
+}
+
+.welcome-section h2 {
+  font-size: 24px;
+}
+
+/* Style the search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 10px;
+  flex-direction: column; /* Center items vertically by stacking them */
+}
+
+/* Remove the line below the search bar */
+.search-bar::after {
+  content: ""; /* Remove the content */
+  width: 100%;
+  height: 0; /* Set height to 0 to remove the line */
+  margin-top: 0; /* Remove the margin */
+  background-color: transparent; /* Set background color to transparent */
+}
+
+/* Style the search input and symbols */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.search input[type="text"] {
+  width: 350px;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 10px 15px 10px 10px;
+  font-size: 16px;
+}
+
+.search .symbol {
+  position: relative;
+  margin-left: 20px; /* Adjust the spacing between the input and symbols */
+  margin-right: 20px;
+}
+
+/* Increase the size of the lens box */
+.search .symbol .lens {
+  fill: #fff;
+  width: 24px; /* Increase the width */
+  height: 24px; /* Increase the height */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect for symbols */
+.search .symbol:hover .disc {
+  top: -30px;
+  left: -30px;
+  transform: translate(0, 0);
+}
+
+.search .symbol:hover .lens {
+  top: 20px;
+  left: 15px;
+  transform: translate(0, 0);
+  fill: #2cd6ce; /* Adjust the fill color on hover */
+}
+
+.cd-dvd-container {
+  display: flex;
+  flex-direction: column; /* Display CD and DVD sections vertically */
+  align-items: center; /* Center the sections horizontally */
+  margin-top: 20px; /* Add top margin for spacing */
+}
+
+.cd-section,
+.dvd-section {
+  display: flex; /* Change to flex to display items horizontally */
+  width: 1200px;
+  height: 350px; /* Set a fixed height for each section (adjust as needed) */
+  overflow-x: scroll; /* Add horizontal scrollbar */
+  scrollbar-width: thin; /* "auto" or "thin" may work depending on the browser */
+  scrollbar-color: #2cd6ce transparent; /* Change the scrollbar color as needed */
+  white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.cd-item,
+.dvd-item {
+  width: 300px; /* Increase the width */
+  height: 250px; /* Increase the height */
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px 20px;
+  margin-right: 30px; /* Add spacing between items */
+  text-align: center;
+}
+
+.cd-item img,
+.dvd-item img {
+  width: 100%; /* Set the width to 100% to make the images fill the item */
+  max-height: 100%; /* Maintain the aspect ratio */
+  object-fit: cover; /* Crop and center the images */
+}
+
+/* Define the scrollbar styles */
+.cd-section::-webkit-scrollbar,
+.dvd-section::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Define the scrollbar track */
+.cd-section::-webkit-scrollbar-track,
+.dvd-section::-webkit-scrollbar-track {
+  background: transparent; /* Set the background color of the scrollbar track */
+}
+
+/* Define the scrollbar thumb (the draggable part) */
+.cd-section::-webkit-scrollbar-thumb,
+.dvd-section::-webkit-scrollbar-thumb {
+  background-color: #2cd6ce; /* Set the color of the scrollbar thumb */
+  border-radius: 6px; /* Round the corners of the scrollbar thumb */
+}
+
+.cd-item img,
+.dvd-item img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.cd-item:hover,
+.dvd-item:hover {
+  transform: scale(1.05); /* Add a hover effect to scale the item */
+}
+
+/* Add a margin to the last item in each section to prevent horizontal scrollbar */
+.cd-section .cd-item:last-child,
+.dvd-section .dvd-item:last-child {
+  margin-right: 0;
+}
+
+.cd-text,
+.dvd-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Rest of your main content styles go here */
+
+/* Style the footer as needed */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/* Define the scrollbar styles for the main page */
+body::-webkit-scrollbar {
+  width: 15px; /* Set the width of the scrollbar */
+}
+
+/* Define the scrollbar track for the main page */
+body::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Set the background color of the scrollbar track */
+}
+
+/* Define the scrollbar thumb (the draggable part) for the main page */
+body::-webkit-scrollbar-thumb {
+  background-color: #2cd6ce; /* Set the color of the scrollbar thumb */
+  border-radius: 6px; /* Round the corners of the scrollbar thumb */
+}
+
+/* Optionally, you can style the scrollbar on hover as well */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #1e1e1e; /* Change the color on hover */
+}

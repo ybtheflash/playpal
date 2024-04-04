@@ -1,0 +1,67 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2c2b2b;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #383838;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Privacy Policy specific styles */
+.privacy-policy {
+  border-left: 5px solid #2cd6ce;
+  padding-left: 15px;
+  background-color: #333333;
+}
+
+/* Terms of Service specific styles */
+.terms-of-service {
+  border-left: 5px solid #ff5a5f;
+  padding-left: 15px;
+  background-color: #292828;
+}
+
+/* Links and buttons */
+a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+button {
+  background-color: #2cd6ce;
+  color: #202020;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0078d4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
