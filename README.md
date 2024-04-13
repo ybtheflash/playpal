@@ -1,6 +1,6 @@
 # Playpal - A CD/DVD Library Management System
 
-This is a full-stack library management system built using PHP and MySQL. It allows users to manage library items, issue and renew items, and generate reports.
+This is a full-stack CD?DVD library management system built using PHP and MySQL. It allows users to manage library items, issue and renew items, and generate reports.
 
 ## Features
 
